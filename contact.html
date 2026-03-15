@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — CodeKids</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">💻</div>
+        CodeKids
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html" class="nav-cta">Get Involved →</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav-cta" style="margin-top:8px;">Get Involved →</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-tag fade-in">Get In Touch</span>
+      <h1 class="fade-in">Let's connect</h1>
+      <p class="fade-in">Whether you want to enroll a student, volunteer, donate, or partner — we'd love to hear from you.</p>
+    </div>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Info side -->
+        <div class="contact-info fade-in">
+          <span class="section-tag">Reach Us</span>
+          <h2>We're here to help</h2>
+          <p>Fill out the form and we'll get back to you within two business days. For urgent matters, call or email us directly.</p>
+
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <strong>Email</strong>
+              <span>hello@codekids.org</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <strong>Phone</strong>
+              <span>(555) 012-3456</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <strong>Main Office</strong>
+              <span>142 Innovation Drive, Suite 3B<br>Springfield, IL 62701</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <strong>Office Hours</strong>
+              <span>Mon–Fri: 9:00 AM – 5:00 PM CT</span>
+            </div>
+          </div>
+
+          <div style="margin-top:40px;">
+            <h3 style="font-size:1rem; margin-bottom:16px;">Ways to support</h3>
+            <div style="display:flex; flex-direction:column; gap:12px;">
+              <div class="card" style="padding:20px; display:flex; gap:14px; align-items:center;">
+                <div class="card-icon icon-orange" style="margin:0; width:40px; height:40px; font-size:1.1rem; flex-shrink:0;">💛</div>
+                <div>
+                  <strong style="font-size:0.92rem;">Make a Donation</strong>
+                  <p style="font-size:0.83rem; margin:0;">Every dollar funds a free seat in a program for an underserved child.</p>
+                </div>
+              </div>
+              <div class="card" style="padding:20px; display:flex; gap:14px; align-items:center;">
+                <div class="card-icon icon-purple" style="margin:0; width:40px; height:40px; font-size:1.1rem; flex-shrink:0;">👩‍💻</div>
+                <div>
+                  <strong style="font-size:0.92rem;">Volunteer to Teach</strong>
+                  <p style="font-size:0.83rem; margin:0;">Share your skills. No formal teaching experience required — just passion.</p>
+                </div>
+              </div>
+              <div class="card" style="padding:20px; display:flex; gap:14px; align-items:center;">
+                <div class="card-icon icon-green" style="margin:0; width:40px; height:40px; font-size:1.1rem; flex-shrink:0;">🏢</div>
+                <div>
+                  <strong style="font-size:0.92rem;">Corporate Partnership</strong>
+                  <p style="font-size:0.83rem; margin:0;">Sponsor a cohort, provide equipment, or create internship pathways.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form side -->
+        <div class="contact-form-wrap fade-in">
+          <h3>Send us a message</h3>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name <span style="color:#EF4444;">*</span></label>
+                <input type="text" id="firstName" name="firstName" placeholder="Jane" required autocomplete="given-name" />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name <span style="color:#EF4444;">*</span></label>
+                <input type="text" id="lastName" name="lastName" placeholder="Smith" required autocomplete="family-name" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address <span style="color:#EF4444;">*</span></label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="subject">I'm interested in...</label>
+              <select id="subject" name="subject">
+                <option value="">Select a topic</option>
+                <option value="enroll">Enrolling my child</option>
+                <option value="volunteer">Volunteering as an instructor</option>
+                <option value="donate">Making a donation</option>
+                <option value="partner">Corporate / school partnership</option>
+                <option value="press">Press or media inquiry</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message <span style="color:#EF4444;">*</span></label>
+              <textarea id="message" name="message" placeholder="Tell us a bit more about what you have in mind..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+              Send Message →
+            </button>
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            <div class="success-icon">🎉</div>
+            <h3>Message sent!</h3>
+            <p>Thanks for reaching out. We'll be in touch within two business days.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section style="background: var(--white); border-top: 1px solid var(--border);">
+    <div class="container">
+      <div style="max-width:560px; margin:0 auto; text-align:center;" class="fade-in">
+        <span class="section-tag">Stay Updated</span>
+        <h2 style="margin-bottom:16px;">Join our newsletter</h2>
+        <p style="margin-bottom:32px;">Get quarterly updates on student stories, upcoming programs, and ways to support our mission.</p>
+        <form id="newsletterForm" style="display:flex; gap:12px; max-width:420px; margin:0 auto;" novalidate>
+          <input type="email" id="newsletterEmail" placeholder="your@email.com" required autocomplete="email"
+            style="flex:1; padding:13px 16px; border:1.5px solid var(--border); border-radius:10px; font-size:0.95rem; font-family:inherit; color:var(--text); background:var(--bg); outline:none;" />
+          <button type="submit" class="btn btn-primary" style="white-space:nowrap;">Subscribe</button>
+        </form>
+        <p id="newsletterMsg" style="margin-top:14px; font-size:0.88rem; color:var(--primary); display:none;">✓ You're subscribed! Welcome to the CodeKids community.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="logo-icon">💻</div>
+            CodeKids
+          </div>
+          <p>A nonprofit dedicated to making coding education accessible to every child, regardless of background.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="programs.html">Programs</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Programs</h4>
+          <a href="programs.html">CodeSprouts</a>
+          <a href="programs.html">CodeExplorers</a>
+          <a href="programs.html">CodeBuilders</a>
+          <a href="programs.html">Summer Camp</a>
+        </div>
+        <div class="footer-col">
+          <h4>Get Involved</h4>
+          <a href="contact.html">Donate</a>
+          <a href="contact.html">Volunteer</a>
+          <a href="contact.html">Partner With Us</a>
+          <a href="contact.html">Newsletter</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 CodeKids. All rights reserved. 501(c)(3) nonprofit.</span>
+        <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
