@@ -321,6 +321,18 @@ nav.scrolled {
 .code-body .cmt  { color: #6B7280; font-style: italic; }
 .code-body .num  { color: #F0ABFC; }
 
+.hero-video-wrap {
+  background: #0B102A;
+}
+
+.hero-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  background: #0B102A;
+}
+
 /* ===== BUTTONS ===== */
 .btn {
   display: inline-flex;
@@ -735,6 +747,17 @@ nav.scrolled {
   font-weight: 600;
   padding: 4px 12px;
   border-radius: 6px;
+}
+
+.program-actions {
+  margin-top: 22px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.program-actions .btn {
+  padding: 10px 18px;
 }
 
 /* ===== CONTACT PAGE ===== */

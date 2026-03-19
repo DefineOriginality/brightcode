@@ -24,6 +24,24 @@ async function loadSharedHeader() {
   initHamburgerMenu();
 }
 
+async function loadSharedFooter() {
+  const footerMount = document.getElementById('site-footer');
+  if (!footerMount) {
+    return;
+  }
+
+  try {
+    const response = await fetch('footer.html', { cache: 'no-store' });
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    footerMount.innerHTML = await response.text();
+  } catch (error) {
+    console.warn('Could not load footer.html. Run the site via a local web server.', error);
+  }
+}
+
 function getCurrentPage() {
   const path = window.location.pathname;
   const fileName = path.split('/').pop();
@@ -198,6 +216,7 @@ function isValidEmail(email) {
 
 async function initSite() {
   await loadSharedHeader();
+  await loadSharedFooter();
   initFadeInOnScroll();
   initContactForm();
   initNewsletterForm();
