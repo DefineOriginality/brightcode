@@ -213,7 +213,8 @@ nav.scrolled {
   transition: color var(--transition), background var(--transition);
 }
 
-.mobile-menu a:hover { color: var(--primary); background: var(--primary-light); }
+.mobile-menu a:hover,
+.mobile-menu a.active { color: var(--primary); background: var(--primary-light); }
 
 /* ===== HERO ===== */
 .hero {

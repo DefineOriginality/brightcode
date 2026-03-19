@@ -3,109 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us — CodeKids</title>
+  <title>About Us — BrightCode</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav id="navbar">
-    <div class="container nav-inner">
-      <a href="index.html" class="nav-logo">
-        <div class="logo-icon">💻</div>
-        CodeKids
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="programs.html">Programs</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="contact.html" class="nav-cta">Get Involved →</a></li>
-      </ul>
-      <div class="hamburger" id="hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </div>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="programs.html">Programs</a>
-      <a href="contact.html">Contact</a>
-      <a href="contact.html" class="nav-cta" style="margin-top:8px;">Get Involved →</a>
-    </div>
-  </nav>
+  <!-- SHARED NAVBAR -->
+  <div id="site-header"></div>
 
   <!-- PAGE HERO -->
   <div class="page-hero">
     <div class="container">
       <span class="section-tag fade-in">Our Story</span>
       <h1 class="fade-in">We believe every child is a <span style="color:var(--primary)">future builder</span></h1>
-      <p class="fade-in">Founded in 2019, CodeKids grew from a single after-school class into a movement reaching thousands of children across our region.</p>
+      <p class="fade-in">Founded in 2019, BrightCode grew from a single after-school class into a movement reaching thousands of children across our region.</p>
     </div>
   </div>
-
-  <!-- MISSION -->
-  <section>
-    <div class="container">
-      <div class="mission-grid">
-        <div class="mission-content fade-in">
-          <span class="section-tag">Mission & Vision</span>
-          <h2>Breaking down barriers to tech education</h2>
-          <p>CodeKids was born from a simple idea: no child should be left behind in the digital age. Our founder, a former software engineer and educator, noticed that the kids who needed technology education most were the ones who had the least access to it.</p>
-          <p>Today, we partner with schools, community centers, and libraries to deliver free and subsidized coding programs that meet kids where they are — in their neighborhoods, in languages they speak, at the level they're at.</p>
-          <div class="value-list">
-            <div class="value-item">
-              <div class="value-dot">✊</div>
-              <div>
-                <strong>Equity First</strong>
-                <p>We prioritize underserved communities, offering 100% free programs to qualifying students.</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <div class="value-dot">🎯</div>
-              <div>
-                <strong>Project-Based Learning</strong>
-                <p>Students learn by building — real games, apps, and websites they're proud to show off.</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <div class="value-dot">💡</div>
-              <div>
-                <strong>Curiosity Over Perfection</strong>
-                <p>We celebrate mistakes as learning opportunities. There is no "wrong" answer when you're exploring.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mission-visual fade-in">
-          <div style="text-align:center; padding:20px 0;">
-            <div style="font-size:4rem; margin-bottom:24px;">🌍</div>
-            <h3 style="margin-bottom:20px; font-size:1.5rem;">Our Impact Since 2019</h3>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; text-align:center;">
-              <div style="background:var(--primary-light); border-radius:12px; padding:20px;">
-                <div style="font-size:1.8rem; font-weight:800; color:var(--primary);">2,400+</div>
-                <div style="font-size:0.82rem; color:var(--text-muted); font-weight:500;">Students</div>
-              </div>
-              <div style="background:var(--accent-light); border-radius:12px; padding:20px;">
-                <div style="font-size:1.8rem; font-weight:800; color:var(--accent);">34</div>
-                <div style="font-size:0.82rem; color:var(--text-muted); font-weight:500;">Classrooms</div>
-              </div>
-              <div style="background:#F0FDF4; border-radius:12px; padding:20px;">
-                <div style="font-size:1.8rem; font-weight:800; color:#16A34A;">85+</div>
-                <div style="font-size:0.82rem; color:var(--text-muted); font-weight:500;">Volunteers</div>
-              </div>
-              <div style="background:#EFF6FF; border-radius:12px; padding:20px;">
-                <div style="font-size:1.8rem; font-weight:800; color:#2563EB;">18</div>
-                <div style="font-size:0.82rem; color:var(--text-muted); font-weight:500;">Partner Orgs</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- VALUES -->
   <section style="background: var(--white); border-top: 1px solid var(--border);">
@@ -155,7 +70,7 @@
     <div class="container">
       <div class="section-header fade-in">
         <span class="section-tag">Our Team</span>
-        <h2>The people behind CodeKids</h2>
+        <h2>The people behind BrightCode</h2>
         <p>A small, passionate team of educators and technologists committed to making a difference.</p>
       </div>
       <div class="team-grid">
@@ -163,7 +78,7 @@
           <div class="team-avatar" style="background: linear-gradient(135deg, #5B4FE9, #818CF8);">SD</div>
           <h3>Simone Delacroix</h3>
           <span class="role">Executive Director & Founder</span>
-          <p>Former software engineer turned educator. Simone started CodeKids after teaching a single after-school class in 2019 that she couldn't stop thinking about.</p>
+          <p>Former software engineer turned educator. Simone started BrightCode after teaching a single after-school class in 2019 that she couldn't stop thinking about.</p>
         </div>
         <div class="team-card fade-in">
           <div class="team-avatar" style="background: linear-gradient(135deg, #F97316, #FBBF24);">MK</div>
@@ -175,7 +90,7 @@
           <div class="team-avatar" style="background: linear-gradient(135deg, #16A34A, #4ADE80);">PN</div>
           <h3>Priya Nair</h3>
           <span class="role">Community Partnerships</span>
-          <p>Priya builds the bridges between CodeKids and schools, libraries, and corporate sponsors that make our free programs possible.</p>
+          <p>Priya builds the bridges between BrightCode and schools, libraries, and corporate sponsors that make our free programs possible.</p>
         </div>
       </div>
     </div>
@@ -186,7 +101,7 @@
     <div class="container fade-in">
       <span class="section-tag">Join Us</span>
       <h2>Be part of the story</h2>
-      <p>Volunteer as an instructor, make a donation, or partner your organization with CodeKids. Let's change the future together.</p>
+      <p>Volunteer as an instructor, make a donation, or partner your organization with BrightCode. Let's change the future together.</p>
       <div class="hero-actions">
         <a href="contact.html" class="btn btn-primary">Get Involved →</a>
         <a href="programs.html" class="btn btn-outline">View Programs</a>
@@ -201,7 +116,7 @@
         <div class="footer-brand">
           <div class="nav-logo">
             <div class="logo-icon">💻</div>
-            CodeKids
+            BrightCode
           </div>
           <p>A nonprofit dedicated to making coding education accessible to every child, regardless of background.</p>
         </div>
@@ -228,7 +143,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 CodeKids. All rights reserved. 501(c)(3) nonprofit.</span>
+        <span>© 2026 BrightCode. All rights reserved. 501(c)(3) nonprofit.</span>
         <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></span>
       </div>
     </div>
