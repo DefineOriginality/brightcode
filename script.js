@@ -214,9 +214,110 @@ function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+const THEME_STORAGE_KEY = 'brightcode-theme';
+
+function getSavedTheme() {
+  const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+  return savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : null;
+}
+
+function applySavedTheme() {
+  const savedTheme = getSavedTheme();
+
+  if (!savedTheme) {
+    document.documentElement.removeAttribute('data-theme');
+    return;
+  }
+
+  document.documentElement.setAttribute('data-theme', savedTheme);
+}
+
+function getActiveTheme() {
+  const manualTheme = document.documentElement.getAttribute('data-theme');
+  if (manualTheme === 'light' || manualTheme === 'dark') {
+    return manualTheme;
+  }
+
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  return prefersDark ? 'dark' : 'light';
+}
+
+function setManualTheme(theme) {
+  if (theme !== 'light' && theme !== 'dark') {
+    return;
+  }
+
+  localStorage.setItem(THEME_STORAGE_KEY, theme);
+  document.documentElement.setAttribute('data-theme', theme);
+}
+
+function updateThemeToggleButton() {
+  const toggleBtn = document.getElementById('themeToggle');
+  if (!toggleBtn) {
+    return;
+  }
+
+  const activeTheme = getActiveTheme();
+  const isDarkMode = activeTheme === 'dark';
+
+  toggleBtn.textContent = isDarkMode ? '🌙' : '☀️';
+  toggleBtn.setAttribute('aria-label', isDarkMode ? 'Switch to light mode' : 'Switch to dark mode');
+  toggleBtn.title = isDarkMode ? 'Switch to light mode' : 'Switch to dark mode';
+}
+
+function initThemeToggle() {
+  if (document.getElementById('themeToggle')) {
+    updateThemeToggleButton();
+    return;
+  }
+
+  const toggleBtn = document.createElement('button');
+  toggleBtn.id = 'themeToggle';
+  toggleBtn.className = 'theme-toggle';
+  toggleBtn.type = 'button';
+
+  toggleBtn.addEventListener('click', () => {
+    const nextTheme = getActiveTheme() === 'dark' ? 'light' : 'dark';
+    setManualTheme(nextTheme);
+    updateThemeToggleButton();
+  });
+
+  document.body.appendChild(toggleBtn);
+  updateThemeToggleButton();
+}
+
+function initThemeAutoSync() {
+  applySavedTheme();
+
+  if (!window.matchMedia) {
+    initThemeToggle();
+    return;
+  }
+
+  const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  const onThemeChange = () => {
+    if (!getSavedTheme()) {
+      updateThemeToggleButton();
+    }
+  };
+
+  initThemeToggle();
+  updateThemeToggleButton();
+
+  if (typeof darkModeQuery.addEventListener === 'function') {
+    darkModeQuery.addEventListener('change', onThemeChange);
+    return;
+  }
+
+  if (typeof darkModeQuery.addListener === 'function') {
+    darkModeQuery.addListener(onThemeChange);
+  }
+}
+
 async function initSite() {
   await loadSharedHeader();
   await loadSharedFooter();
+  initThemeAutoSync();
   initFadeInOnScroll();
   initContactForm();
   initNewsletterForm();
