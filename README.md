@@ -1,6 +1,6 @@
 # BrightCode
 Official website for the BrightCode organization.
-More info coming soon.
+Currently in development.
 
 Note for editors:
 This app requires a local web server, such as the VS Code Live Server Extension, to run.
