@@ -968,6 +968,263 @@ nav.scrolled {
 
 .form-success h3 { color: var(--text); margin-bottom: 10px; }
 
+/* ===== AUTH + DASHBOARD ===== */
+.auth-shell {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.auth-panel {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 400px;
+  padding-right: 400px;
+  box-shadow: var(--shadow);
+}
+
+.auth-panel-feature {
+  background: linear-gradient(180deg, rgba(91, 79, 233, 0.08), rgba(255, 255, 255, 1));
+}
+
+.auth-panel h2 {
+  margin-bottom: 14px;
+}
+
+.auth-panel p {
+  color: var(--text-muted);
+}
+
+.auth-social-btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.auth-mode-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 18px 0 14px;
+}
+
+.auth-mode-btn {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
+}
+
+.auth-mode-btn.is-active {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--primary-light);
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 22px 0;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.auth-status {
+  min-height: 1.4rem;
+  margin-top: 16px;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.auth-status.is-error {
+  color: #EF4444;
+}
+
+.auth-status.is-success {
+  color: #16A34A;
+}
+
+.auth-footnote {
+  margin-top: 16px;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.auth-footnote a {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.auth-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.auth-list-item {
+  display: flex;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.auth-list-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+
+.dashboard-shell {
+  display: grid;
+  gap: 24px;
+}
+
+.dashboard-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.dashboard-status {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+}
+
+.dashboard-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.dashboard-card-highlight {
+  background: linear-gradient(180deg, rgba(91, 79, 233, 0.08), rgba(255, 255, 255, 1));
+}
+
+.dashboard-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.status-badge.is-muted {
+  background: var(--bg);
+  color: var(--text-muted);
+}
+
+.lesson-list {
+  display: grid;
+  gap: 12px;
+}
+
+.lesson-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.lesson-item p {
+  margin: 6px 0 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.lesson-action {
+  flex-shrink: 0;
+}
+
+.lesson-link {
+  white-space: nowrap;
+}
+
+.empty-state {
+  margin: 0;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 1px dashed rgba(91, 79, 233, 0.4);
+  font-weight: 600;
+}
+
+.auth-empty-card {
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px dashed var(--border);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.auth-empty-card + .auth-empty-card {
+  margin-top: 14px;
+}
+
+.auth-empty-card strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.auth-empty-card p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
 /* ===== FOOTER ===== */
 footer {
   background: var(--footer-bg);
